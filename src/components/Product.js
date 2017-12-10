@@ -36,7 +36,7 @@ class Product extends Component {
     let selectedOptions = this.state.selectedOptions
     selectedOptions[target.name] = target.value
 
-    const selectedVariant = Client.Product.Helpers.variantForOptions(
+    const selectedVariant = Client.product.variantForOptions(
       this.props.product,
       selectedOptions
     )

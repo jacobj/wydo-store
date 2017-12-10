@@ -63,7 +63,7 @@ class App extends Component {
       { id: lineItemId, quantity: parseInt(quantity, 10) },
     ]
 
-    return this.props.client
+    return this.props.client.checkout
       .updateLineItems(checkoutId, lineItemsToUpdate)
       .then(res => {
         this.setState({
