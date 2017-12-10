@@ -14,8 +14,6 @@ class App extends Component {
       shop: {},
     }
 
-    console.log(this.props.client)
-
     this.handleCartClose = this.handleCartClose.bind(this)
     this.addVariantToCart = this.addVariantToCart.bind(this)
     this.updateQuantityInCart = this.updateQuantityInCart.bind(this)
