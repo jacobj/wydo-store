@@ -6,6 +6,7 @@ class Products extends Component {
     let products = this.props.products.map(product => {
       return (
         <Product
+          client={this.props.client}
           addVariantToCart={this.props.addVariantToCart}
           checkout={this.props.checkout}
           key={product.id.toString()}
