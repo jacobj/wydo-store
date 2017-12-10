@@ -27,6 +27,8 @@ class App extends Component {
       })
     })
 
+    console.log(this.props.client.product)
+
     this.props.client.product.fetchAll().then(res => {
       this.setState({
         products: res,
@@ -75,7 +77,7 @@ class App extends Component {
   removeLineItemInCart(lineItemId) {
     const checkoutId = this.state.checkout.id
 
-    return this.props.client
+    return this.props.client.checkout
       .removeLineItems(checkoutId, [lineItemId])
       .then(res => {
         this.setState({
