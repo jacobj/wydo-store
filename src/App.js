@@ -105,6 +105,7 @@ class App extends Component {
           </button>
         </nav>
         <Products
+          client={client}
           products={this.state.products}
           addVariantToCart={this.addVariantToCart}
         />
