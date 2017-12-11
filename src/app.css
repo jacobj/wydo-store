@@ -121,7 +121,7 @@ nav {
 /* BASE APP
  * ============================== */
 .App {
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -156,16 +156,16 @@ nav {
 
 .Product-wrapper {
   max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
   margin: 120px auto 60px;
   padding: 0 20px;
-  columns: 3;
-  column-gap: 40px;
 }
 
 @media (max-width: 768px) {
   .Product-wrapper {
     margin: 100px auto 40px;
-    columns: 1;
+    flex-direction: column;
   }
 }
 
