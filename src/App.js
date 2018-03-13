@@ -31,7 +31,12 @@ class App extends Component {
 
     this.props.client.product.fetchAll().then(res => {
       this.setState({
-        products: res,
+        products: res.sort((a, b) => {
+          console.log(a.createdAt)
+          let dateA = new Date(a.createdAt)
+          let dateB = new Date(b.createdAt)
+          return dateB - dateA
+        }),
       })
     })
 
